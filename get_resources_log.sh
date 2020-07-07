@@ -14,6 +14,6 @@ if [ ! -e ./ps_logs ]; then
   mkdir ./ps_logs
 fi
 # psのログを取得する。
-ps -ef > ./ps_logs/ps_${FILE_DATE}.txt
+ps aefux > ./ps_logs/ps_${FILE_DATE}.txt
 
 # oracle processのログの取得はRedmine参照。
