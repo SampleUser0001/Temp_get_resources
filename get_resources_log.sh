@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh   
 
 FILE_DATE=`date +"%Y%m%d_%H%M%S"`
 
@@ -16,9 +16,4 @@ fi
 # psのログを取得する。
 ps -ef > ./ps_logs/ps_${FILE_DATE}.txt
 
-# oracle_processのログを配置する用のディレクトリが無かったら作成する。
-if [ ! -e ./oracle_process_logs ]; then 
-  mkdir ./oracle_process_logs
-fi
-# Oracleのプロセスを取得する。
-sqlplus <ユーザ>/<パスワード>@<接続先> ./get_oracle_process.sql 
+# oracle processのログの取得はRedmine参照。
